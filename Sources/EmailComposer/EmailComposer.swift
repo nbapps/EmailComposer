@@ -34,6 +34,7 @@ struct EmailComposer<ContentView: View>: ViewModifier {
                     EmailComposerView(emailData: emailData ?? EmailData()) { result in
                         self.result?(result)
                     }
+                    .ignoresSafeArea(.container, edges: .bottom)
                 } else {
                     deviceCannotSendEmailsView
                 }
